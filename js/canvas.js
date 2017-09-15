@@ -22,3 +22,35 @@ context.lineTo(100, 100);
 context.strokeStyle = 'black';
 context.lineWidth = 5;
 context.stroke();
+
+
+// var img = new Image();
+// img.src = 'img.png';
+
+// context.drawImage(img, 0, 0);
+
+var x = 0,
+  speed = 10,
+  direction = 1;
+
+function draw() {
+  x += speed * direction;
+  if (x > canvas.width - 100) {
+    direction = -1;
+  } else if (x < 0) {
+    direction = 1;
+  }
+
+  context.beginPath();
+  context.rect(x, canvas.height/2, 100, 20);
+  x++;
+  context.fillStyle = "green";
+  context.fill();
+}
+
+function animate() {
+  context.clearRect(0, 0, canvas.width, canvas.height)
+  draw();
+}
+
+setInterval(animate, 1000/30);
