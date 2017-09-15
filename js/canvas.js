@@ -13,7 +13,7 @@ context.fill();
 
 context.beginPath();
 context.fillStyle = 'yellow';
-context.arc(60, 60, 50, 0, 2*Math.PI, false);
+context.arc(60, 60, 50, 0, 2 * Math.PI, false);
 context.fill();
 
 context.beginPath();
@@ -42,7 +42,7 @@ function draw() {
   }
 
   context.beginPath();
-  context.rect(x, canvas.height/2, 100, 20);
+  context.rect(x, canvas.height / 2, 100, 20);
   x++;
   context.fillStyle = "green";
   context.fill();
@@ -53,4 +53,4 @@ function animate() {
   draw();
 }
 
-setInterval(animate, 1000/30);
+setInterval(animate, 1000 / 30);
